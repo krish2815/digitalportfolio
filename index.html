@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>my portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/7c673d102a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="LOGO2.jpg" class="logo"> 
+                    <ul id="sidemenu">
+                        <li><a href ="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT ME</a></li>
+                        <li><a href="#portfolio">MY WORKS</a></li>
+                        <li><a href="#contact">CONTACT ME</a></li>
+                        <i class="fa-solid fa-square-xmark"onclick="closemenu()"></i>
+                    </ul>           
+                    <i class="fa-solid fa-bars"onclick="openmenu()"></i>   
+                 </nav>
+                 <div class="header-text">
+                    <h1>Hi,This is <span>Gopalakrishnan..</span><br>Personal Portfolio Website</h1>
+                 </div>
+            </div>    
+        </div>
+<!--------------------about me------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="img_1.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                     <p>I am So enthusiastic to learn new technologies. 
+                         It's my portfolio to evaluate my professional skills. 
+                          I have more skills to working as crictical thinking. 
+                           I strongly know c, c++, python and java.  
+                        I have a skills to maintain a team work.
+                         Getting to work and meetings on time shows you have strong management skills and value your colleagues times.
+                         I am so friendly with colleaques.I cam manage multiple tasks and look forward to becoming part of your team.</p>
+                          </p>    
+                          <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                            <p class="tab-links" onclick="opentab('skills')">skills</p>
+                          </div>
+                          <div class="tab-contents active-tab"id="education">
+                            <ul>
+                                <li><span>Annamalai university<br>Dharmapuram adhinam arts college<br>Mayiladuthurai</span></li>
+                                </ul>
+                                </div>
+                                <div class="tab-contents"id="skills">
+                                    <ul>
+                                <li><span>Java</span></li>
+                                <li><span>python</span></li>
+                                <li><span>website desgning</span></li>
+                                <li><span>Mobile App developement</span></li>
+                            </ul>
+                          </div>
+<!------------------------------Portfolio--------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="work1.jpg">
+                <div class="layer">
+                <h3>Social Media APP</h3>
+                <P>The app connects you to the talented person around the world.</P>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work2.jpg">
+                <div class="layer">
+                <h3>Music App</h3>
+                <p>The app feels you better to make refreshing...</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="work3.jpg">
+                <div class="layer">
+                <h3>Shopping App</h3>
+                <p>The app tends to make you to be very social.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+</div>
+
+<!-----------------------------Contact-------------------------------->
+        <div id="Contact">
+            <div class="Conatainer">
+                <div class="row">
+                    <div class="Contact-left">
+                        <h2 class="sub-title">CONTACT ME</h2>
+                        <p><i class="fa-solid fa-envelope"></i>aswinkrish28@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>8925056376</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>                                                 
+                    </div>
+                    <a href="my cv.jpg" download class="btn btn4">DOWNLOAD CV</a>
+                </div>
+                <div class="Contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="E-mail" name="E-mail" placeholder="Your E-mail" required>
+                        <textarea name="message" rows="6" placholder="Your message"></textarea>
+                        <button type="submit"class="btn btn4">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright@gopalkrish<i class="fa-solid fa-heart">krish</i></p>
+        </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            var sidemenu = document.getElementsById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right= "0";
+            }
+            function closemenu(){
+                sidemenu.style.right= "-200px";
+            }
+        </script>
+    </body>
+</html>
